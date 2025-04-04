@@ -1,0 +1,74 @@
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Переменные окружения и конфигурация
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+config.js
+config.json
+
+# Логи
+logs/
+*.log
+combined.log
+error.log
+
+# Временные файлы
+tmp/
+temp/
+.tmp
+.temp
+
+# Кэш
+.cache/
+.npm
+.yarn
+
+# Данные и базы данных
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Директории сборки/генерации
+dist/
+build/
+out/
+
+# Файлы редакторов и IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Системные файлы
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.directory
+
+# Ключи и сертификаты
+*.pem
+*.key
+*.cert
+*.crt
+
+# Debug файлы
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
