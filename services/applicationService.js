@@ -79,8 +79,25 @@ async function hasPendingApplication(userId) {
   }
 }
 
+/**
+ * Получает заявку по ID пользователя
+ * @param {number} userId - ID пользователя Telegram
+ * @returns {Promise<Object|null>} - Заявка или null, если не найдена
+ */
+async function getApplicationByUserId(userId) {
+  try {
+    // Получаем самую последнюю заявку от пользователя
+    const application = await Application.findOne({ userId }).sort({ timestamp: -1 });
+    return application;
+  } catch (error) {
+    logger.error(`Error getting application for user ${userId}: ${error.message}`);
+    throw error;
+  }
+}
+
 module.exports = {
   saveApplication,
   updateApplicationStatus,
-  hasPendingApplication
+  hasPendingApplication,
+  getApplicationByUserId
 };
