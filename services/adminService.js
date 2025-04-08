@@ -46,8 +46,7 @@ async function notifyAdmins(bot, applicant, adminMessageIds) {
 					`<b>Username:</b> ${
 						applicant.username ? '@' + applicant.username : 'Не указан'
 					}\n` +
-					`<b>ID:</b> ${applicant.userId}\n` +
-					`<b>Профиль:</b> <a href="tg://user?id=${applicant.userId}">Открыть профиль</a>\n\n` +
+					`<b>ID:</b> <code>${applicant.userId}</code>\n\n` +
 					`Пожалуйста, примите решение по этой заявке:`,
 				{
 					parse_mode: 'HTML',
@@ -130,8 +129,7 @@ async function notifyAdminsAboutUpdate(
 					`<b>Username:</b> ${
 						application.username ? '@' + application.username : 'Не указан'
 					}\n` +
-					`<b>ID:</b> ${application.userId}\n` +
-					`<b>Профиль:</b> <a href="tg://user?id=${application.userId}">Открыть профиль</a>\n\n` +
+					`<b>ID:</b> <code>${application.userId}</code>\n\n` +
 					`<b>Решение:</b> ${statusText} ${statusEmoji}\n` +
 					`<b>Обработал:</b> ${adminWhoProcessed.first_name} ${
 						adminWhoProcessed.last_name || ''
